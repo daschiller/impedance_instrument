@@ -25,6 +25,8 @@ Raspberry Pi CM4 with a touchscreen and some other peripherals.
 
 # Software
 
+![Screenshot of user interface](screenshot.png)
+
 The software is built as a stage for
 [pi-gen](https://github.com/RPi-Distro/pi-gen). Just drop it in and include it.
 There's also a stage for the device tree and display driver of the reTerminal
