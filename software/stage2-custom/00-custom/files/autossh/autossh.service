@@ -1,0 +1,13 @@
+[Unit]
+Description=Reverse SSH tunnel
+After=network-online.target
+
+[Service]
+User={USER}
+Type=simple
+Restart=always
+RestartSec=10
+ExecStart=/usr/bin/autossh -N -o "ExitOnForwardFailure=yes" -o "ServerAliveInterval 25" -R {PORT}:localhost:22 -p 60000 i3sense@example.com
+
+[Install]
+WantedBy=multi-user.target

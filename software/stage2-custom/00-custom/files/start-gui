@@ -1,0 +1,17 @@
+#!/bin/sh
+
+DIR=/usr/local/src/impedance
+
+if [ "$1" = "-x" ]; then
+    export QT_QPA_PLATFORM=xcb
+    export LIBGL_ALWAYS_INDIRECT=1
+else
+    export QML2_IMPORT_PATH=.
+    export QT_VIRTUALKEYBOARD_STYLE=mystyle
+    export QT_IM_MODULE=qtvirtualkeyboard
+fi
+
+cd "$DIR" || exit 1
+. ./env.sh
+
+exec python ui.py "$@"

@@ -1,0 +1,22 @@
+python3-pip
+vim tmux
+autossh
+
+jq lm-sensors
+
+# dependencies for impedance software
+python3-matplotlib
+python3-libiio
+python3-smbus
+python3-scipy
+python3-pyside2.qtcore
+python3-pyside2.qtwidgets
+qtvirtualkeyboard-plugin
+qml-module-qtquick2
+qml-module-qtquick-window2
+qml-module-qtquick-layouts
+qml-module-qt-labs-folderlistmodel
+aha
+
+# for X11 forwarding
+xauth

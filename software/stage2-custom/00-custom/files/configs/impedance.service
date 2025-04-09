@@ -1,0 +1,14 @@
+[Unit]
+Description=Impedance measurement GUI
+
+[Service]
+Type=simple
+User={USER}
+Environment="XDG_RUNTIME_DIR=/run/user/1000"
+# invoke with root privileges
+ExecStartPre=+/usr/bin/chown -R {USER} /sys/bus/iio/devices/iio:device0/
+ExecStart=/usr/local/bin/start-gui
+Restart=on-failure
+
+[Install]
+WantedBy=basic.target

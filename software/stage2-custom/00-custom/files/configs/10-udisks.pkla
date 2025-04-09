@@ -1,0 +1,4 @@
+[udisks2]
+Identity=unix-group:plugdev
+Action=org.freedesktop.udisks2.filesystem-mount-other-seat
+ResultAny=yes
